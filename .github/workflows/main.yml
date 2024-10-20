@@ -25,7 +25,7 @@ jobs:
       #  run: ls -R node_modules
 
     - name: Install dependencies
-      run: npm install --production=false
+      run: npm ci --production=True
       # or npm ci
 
     - name: Build the app
