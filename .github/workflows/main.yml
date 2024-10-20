@@ -12,7 +12,7 @@ jobs:
     steps:
 
     - name: debug
-      run: ping google.com
+      run: ping google.com -c 3
 
     - name: Deploy to VPS
       env:
