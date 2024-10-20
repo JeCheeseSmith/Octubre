@@ -43,6 +43,8 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
-        rsync -avz --delete dist/ $VPS_USER@$VPS_HOST:$VPS_PATH
-        ssh $VPS_USER@$VPS_HOST:$VPS_PORT "cd $VPS_PATH && npm install --production " 
+      # rsync -avz $VPS_USER@$VPS_HOST $VPS_PATH
+      # --delete dist/
+        ssh $VPS_USER@$VPS_HOST -p $VPS_PORT "cd $VPS_PATH && touch t.txt
+             # && npm install --production"
       # && pm2 restart all"
