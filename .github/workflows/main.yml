@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+#    - name: Checkout code
+#      uses: actions/checkout@v2
 #
 #    - name: Set up Node.js
 #      uses: actions/setup-node@v2
@@ -37,14 +37,14 @@ jobs:
         VPS_USER: ${{ secrets.SSH_USERNAME }}
         VPS_HOST: ${{ secrets.SSH_HOST }}
         VPS_PORT: ${{ secrets.SSH_PORT }}
-        VPS_PATH: ${{ secrets.PATH}}
+        VPS_PATH: ${{ secrets.PATH }}
       run: |
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
-      # rsync -avz $VPS_USER@$VPS_HOST $VPS_PATH
-      # --delete dist/
+# rsync -avz $VPS_USER@$VPS_HOST $VPS_PATH
+# --delete dist/
         ssh $VPS_USER@$VPS_HOST -p $VPS_PORT "cd $VPS_PATH && touch t.txt"
-             # && npm install --production"
-      # && pm2 restart all"
+# && npm install --production"
+# && pm2 restart all"
