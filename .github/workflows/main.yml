@@ -12,24 +12,24 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-
-    # - name: Install build tools
-      #  run: sudo apt-get install -y build-essential
-
-      #- name: List node_modules
-      #  run: ls -R node_modules
-
-    - name: Install dependencies
-      run: npm ci --production=True
-      # or npm ci
-
-    - name: Build the app
-      run: npm run build
+#
+#    - name: Set up Node.js
+#      uses: actions/setup-node@v2
+#      with:
+#        node-version: '16'
+#
+#    # - name: Install build tools
+#      #  run: sudo apt-get install -y build-essential
+#
+#      #- name: List node_modules
+#      #  run: ls -R node_modules
+#
+#    - name: Install dependencies
+#      run: npm ci --production=True
+#      # or npm ci
+#
+#    - name: Build the app
+#      run: npm run build
 
     - name: Deploy to VPS
       env:
