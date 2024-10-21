@@ -26,15 +26,16 @@ h2 {
 
 h3 {
   margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
   font-size: 3vh;
 }
 
 p {
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
+  font-size: 2vh;
 }
 
-.App {
+.buttonGroup {
   margin: 0 auto;
   display: flex;
   flex-direction: row;

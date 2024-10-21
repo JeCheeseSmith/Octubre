@@ -12,7 +12,6 @@ const ButtonGroup = ({ buttons }) => {
                 <button key={i} name={buttonLabel[0]} onClick={() => openInNewTab(buttonLabel[1])}>
                     {buttonLabel[0]}
                 </button>
-
             ))}
         </>
     );
