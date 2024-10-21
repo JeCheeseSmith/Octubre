@@ -7,6 +7,8 @@ function App() {
           <h1>Octubre</h1>
           <h2>Home of projects</h2>
 
+          <p> This website is yet under construction :) 👷 </p>
+
           <p>
               This is a linking page. Click on one of the buttons to go to the specified project, website or subdomain.
           </p>
