@@ -12,6 +12,8 @@ jobs:
     - name: debug
       run: hostname -I && ping google.com -c 3
 
+    - name: Check connectivity
+      run: ping6 -c 4 ${{ secrets.SSH_HOST }} || echo "Ping failed"
 
     - name: SSH into VM and deploy
       uses: appleboy/ssh-action@master
