@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: debug
-      run: hostname -I && ping ${{ secrets.SSH_HOST }}
+      run: hostname -I && ping google.com -c 3
 
 
     - name: SSH into VM and deploy
