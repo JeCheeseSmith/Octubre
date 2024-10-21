@@ -6,26 +6,34 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  pull-origin-rebase:
     runs-on: ubuntu-latest
 
-    steps:
+  steps:
+    - name: SSH into VM and deploy
+  uses: appleboy/ssh-action@master
+  port: ${{ secrets.SSH_PORT }}
+  host: ${{ secrets.SSH_HOST }}
+  username: ${{ secrets.SSH_USERNAME }}
+  key: ${{ secrets.SSH_PRIVATE_KEY }}
+  script: |
+            cd compose/
+            touch t.txt
 
-    - name: debug
-      run: ping google.com -c 3
+  #sudo su -c 'cd app/PPDB-Template-App && git stash && git remote set-url origin https://team6-ua-ppdb-bot:${{secrets.BOT_ACCESSTOKEN}}@github.com/PPDBTeam6-2023-2024/PPDB-Project.git && git pull origin main --rebase'
+            
+            
 
-    - name: Deploy to VPS
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        VPS_USER: ${{ secrets.SSH_USERNAME }}
-        VPS_HOST: ${{ secrets.SSH_HOST }}
-        VPS_PORT: ${{ secrets.SSH_PORT }}
-        VPS_PATH: ${{ secrets.PATH }}
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
+  #    run: |
+  #      mkdir -p ~/.ssh
+  #      echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+  #      chmod 600 ~/.ssh/id_rsa
+  # ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
+# rsync -avz $VPS_USER@$VPS_HOST $VPS_PATH
+# --delete dist/
+        # ssh $VPS_USER@$VPS_HOST -p $VPS_PORT "cd $VPS_PATH && touch t.txt"
+# && npm install --production"
+# && pm2 restart all"
 
-        ssh $VPS_USER@$VPS_HOST -p $VPS_PORT "cd $VPS_PATH && touch t.txt"
+
 
