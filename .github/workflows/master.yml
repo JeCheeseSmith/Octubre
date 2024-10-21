@@ -23,11 +23,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Debug
-        run: |
-          pwd
-          ls -a
-
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
