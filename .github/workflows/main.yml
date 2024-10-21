@@ -22,19 +22,31 @@ jobs:
     - name: Check connectivity
       run: wget https://www.octubre.be || echo "octubre failed"
 
-    - name: SSH into VM and deploy
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 30724
-        protocol: tcp6
-        debug: true
-#      proxy_port: ${{ secrets.SSH_PORT }}
-        script: |
-            cd compose/
-            touch t.txt
+
+    - name: Set up SSH
+      run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa [${{ secrets.SSH_HOST }}] >> ~/.ssh/known_hosts
+
+    - name: Connect to server
+      run: |
+        ssh ${{ secrets.SSH_USERNAME }}@[${{ secrets.SSH_HOST }}] -p ${{ secrets.SSH_PORT }} "whoami"
+
+#    - name: SSH into VM and deploy
+#      uses: appleboy/ssh-action@master
+#      with:
+#        host: ${{ secrets.SSH_HOST }}
+#        username:
+#        key: ${{ secrets.SSH_PRIVATE_KEY }}
+#        port: 30724
+#        protocol: tcp6
+#        debug: true
+##      proxy_port: ${{ secrets.SSH_PORT }}
+#        script: |
+#            cd compose/
+#            touch t.txt
 
   #sudo su -c 'cd app/PPDB-Template-App && git stash && git remote set-url origin https://team6-ua-ppdb-bot:${{secrets.BOT_ACCESSTOKEN}}@github.com/PPDBTeam6-2023-2024/PPDB-Project.git && git pull origin main --rebase'
             
