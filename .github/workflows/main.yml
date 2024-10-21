@@ -13,6 +13,8 @@ jobs:
 #      run: |
 #        hostname -I
 #        ping google.com -c 3
+    - name: Check Google Connectivity
+      run: curl -I https://www.google.com || echo "Request failed"
 
     - name: Check connectivity
       run: ping6 -c 4 ${{ secrets.SSH_HOST }} || echo "Ping failed"
