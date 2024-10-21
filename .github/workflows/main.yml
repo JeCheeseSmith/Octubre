@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: debug
+      run: hostname -I
+
     - name: SSH into VM and deploy
       uses: appleboy/ssh-action@master
       with:
