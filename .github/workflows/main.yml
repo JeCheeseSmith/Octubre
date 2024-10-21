@@ -16,6 +16,9 @@ jobs:
     - name: Check Google Connectivity
       run: curl -I https://www.google.com || echo "Request failed"
 
+    - name: Show network interfaces
+      run: ip a
+
     - name: Check connectivity
       run: wget https://www.octubre.be || echo "octubre failed"
 
