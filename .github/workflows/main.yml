@@ -9,59 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#    - name: debug
-#      run: |
-#        hostname -I
-#        ping google.com -c 3
-    - name: Check Google Connectivity
-      run: curl -I https://www.google.com || echo "Request failed"
-
-    - name: Show network interfaces
-      run: ip a
-
-    - name: Check connectivity
-      run: wget https://www.octubre.be || echo "octubre failed"
-
-
     - name: Set up SSH
       run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-    #ssh-keyscan -t rsa [${{ secrets.SSH_HOST }}] >> ~/.ssh/known_hosts
 
     - name: Connect to server
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@[${{ secrets.SSH_HOST }}] -p ${{ secrets.SSH_PORT }} "whoami"
-
-#    - name: SSH into VM and deploy
-#      uses: appleboy/ssh-action@master
-#      with:
-#        host: ${{ secrets.SSH_HOST }}
-#        username:
-#        key: ${{ secrets.SSH_PRIVATE_KEY }}
-#        port: 30724
-#        protocol: tcp6
-#        debug: true
-##      proxy_port: ${{ secrets.SSH_PORT }}
-#        script: |
-#            cd compose/
-#            touch t.txt
-
-  #sudo su -c 'cd app/PPDB-Template-App && git stash && git remote set-url origin https://team6-ua-ppdb-bot:${{secrets.BOT_ACCESSTOKEN}}@github.com/PPDBTeam6-2023-2024/PPDB-Project.git && git pull origin main --rebase'
-            
-            
-
-  #    run: |
-  #      mkdir -p ~/.ssh
-  #      echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-  #      chmod 600 ~/.ssh/id_rsa
-  # ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
-# rsync -avz $VPS_USER@$VPS_HOST $VPS_PATH
-# --delete dist/
-        # ssh $VPS_USER@$VPS_HOST -p $VPS_PORT "cd $VPS_PATH && touch t.txt"
-# && npm install --production"
-# && pm2 restart all"
-
-
-
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "touch t.txt"
