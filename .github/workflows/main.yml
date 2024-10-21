@@ -17,7 +17,7 @@ jobs:
       run: curl -I https://www.google.com || echo "Request failed"
 
     - name: Check connectivity
-      run: curl -I  https://www.octubre.be || echo "octubre failed"
+      run: wget https://www.octubre.be || echo "octubre failed"
 
     - name: SSH into VM and deploy
       uses: appleboy/ssh-action@master
