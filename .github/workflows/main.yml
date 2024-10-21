@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: debug
-      run: hostname -I
+      run: hostname -I && ping ${{ secrets.SSH_HOST }}
+
 
     - name: SSH into VM and deploy
       uses: appleboy/ssh-action@master
