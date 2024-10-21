@@ -17,6 +17,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 30724
         protocol: tcp6
+        debug: true
 #      proxy_port: ${{ secrets.SSH_PORT }}
         script: |
             cd compose/
