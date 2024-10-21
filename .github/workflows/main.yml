@@ -11,11 +11,12 @@ jobs:
     steps:
     - name: SSH into VM and deploy
       uses: appleboy/ssh-action@v1.1.0
-      port: ${{ secrets.SSH_PORT }}
-      host: ${{ secrets.SSH_HOST }}
-      username: ${{ secrets.SSH_USERNAME }}
-      key: ${{ secrets.SSH_PRIVATE_KEY }}
-      script: |
+      with:
+        port: ${{ secrets.SSH_PORT }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
             cd compose/
             touch t.txt
 
