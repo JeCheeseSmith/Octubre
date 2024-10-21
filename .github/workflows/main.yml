@@ -6,17 +6,16 @@ on:
       - master
 
 jobs:
-  pull-origin-rebase:
+  build:
     runs-on: ubuntu-latest
-
-  steps:
+    steps:
     - name: SSH into VM and deploy
-  uses: appleboy/ssh-action@master
-  port: ${{ secrets.SSH_PORT }}
-  host: ${{ secrets.SSH_HOST }}
-  username: ${{ secrets.SSH_USERNAME }}
-  key: ${{ secrets.SSH_PRIVATE_KEY }}
-  script: |
+      uses: appleboy/ssh-action@master
+      port: ${{ secrets.SSH_PORT }}
+      host: ${{ secrets.SSH_HOST }}
+      username: ${{ secrets.SSH_USERNAME }}
+      key: ${{ secrets.SSH_PRIVATE_KEY }}
+      script: |
             cd compose/
             touch t.txt
 
