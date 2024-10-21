@@ -24,7 +24,9 @@ jobs:
         run: npm run build
 
       - name: Debug
-        run: pwd
+        run: |
+          pwd
+          ls -a
 
       - name: Set up SSH
         run: |
