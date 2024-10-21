@@ -14,15 +14,9 @@ function App() {
           </p>
 
           <div className="App">
-              <ButtonGroup buttons={[ ["Home", "https://home.octubre.be"], ["Cloud", "https://cloud.octubre.be"], ["Me", "https://me.octubre.be"]]}/>
-          </div>
-
-          <div className="App">
-              <ButtonGroup buttons={[ ["Chat", "https://chat.octubre.be"], ["Archive", "https://archive.octubre.be"], ["Dev", "https://dev.octubre.be"]]}/>
-          </div>
-
-          <div className="App">
-              <ButtonGroup buttons={[["Blog", "https://blog.octubre.be"], ["Status", "https://status.octubre.be"], ["Log", "https://home.octubre.be"]]}/>
+              <ButtonGroup buttons={[ ["Home", "https://home.octubre.be"], ["Cloud", "https://cloud.octubre.be"], ["Me", "https://me.octubre.be"], ["Chat", "https://chat.octubre.be"], ["Archive", "https://archive.octubre.be"], ["Dev", "https://dev.octubre.be"], ["Blog", "https://blog.octubre.be"], ["Status", "https://status.octubre.be"], ["Log", "https://home.octubre.be"]]}/>
+              {/*<ButtonGroup buttons={[["Chat", "https://chat.octubre.be"], ["Archive", "https://archive.octubre.be"], ["Dev", "https://dev.octubre.be"] ]}/>*/}
+              {/*<ButtonGroup buttons={[["Blog", "https://blog.octubre.be"], ["Status", "https://status.octubre.be"], ["Log", "https://home.octubre.be"]]}/>*/}
           </div>
 
           <h3>Contact</h3>
