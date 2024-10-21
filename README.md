@@ -1,5 +1,11 @@
 # Octubre
 
-Website code for the public octubre sites and its derivatives
+Copyright (C) 2024 JeCheeseSmith, Watson Smith (this is an alias)
 
-Testa
+This is the website code used for https://www.octubre.be . It is a hobby project and I will gradually extend upon it's services.
+
+Feel free to report any issues or bugs! You can contact me using the issues form.
+
+## Architecture
+
+The website currently consists of a simple React frontend which links to different services I host.
