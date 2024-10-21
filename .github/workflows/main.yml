@@ -16,6 +16,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
+        proxy_port: ${{ secrets.SSH_PORT }}
         script: |
             cd compose/
             touch t.txt
