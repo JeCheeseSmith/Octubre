@@ -9,10 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: debug
-      run: |
-        hostname -I 
-        ping google.com -c 3
+#    - name: debug
+#      run: |
+#        hostname -I
+#        ping google.com -c 3
 
     - name: Check connectivity
       run: ping6 -c 4 ${{ secrets.SSH_HOST }} || echo "Ping failed"
