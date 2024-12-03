@@ -1,5 +1,3 @@
-
-![Header](./vinyltocat.png)
 <div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/vinyltocat.png"> </div>
 
 # Octubre
