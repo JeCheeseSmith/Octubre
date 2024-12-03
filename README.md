@@ -1,13 +1,5 @@
-<div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/github-header-image.png"> </div>
 
-<div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/vinyltocat.png"> </div>
-
-<div align="center">
-  <p>
-    <a href="https://www.ultralytics.com/events/yolovision" target="_blank">
-      <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" alt="YOLO Vision banner"></a>
-  </p>
-![Header](github-header-image.png)
+![Header](./github-header-image.png)
 
 # Octubre
 
