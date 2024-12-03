@@ -1,9 +1,3 @@
----
-title: Octubre
-description: This is the website code used for https://www.octubre.be. It is a hobby project and I will gradually extend upon its services.
-image: https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/github-header-image.png
----
-
 ![Header](./github-header-image.png)
 
 
