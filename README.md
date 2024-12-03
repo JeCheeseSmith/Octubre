@@ -9,3 +9,5 @@ Feel free to report any issues or bugs! You can contact me using the issues form
 ## Architecture
 
 The website currently consists of a simple React frontend which links to different services I host.
+
+![Header](./vinyltocat.png)
