@@ -1,3 +1,7 @@
+
+![Header](./vinyltocat.png)
+<div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/vinyltocat.png"> </div>
+
 # Octubre
 
 Copyright (C) 2024 JeCheeseSmith, Watson Smith (this is an alias)
@@ -10,4 +14,3 @@ Feel free to report any issues or bugs! You can contact me using the issues form
 
 The website currently consists of a simple React frontend which links to different services I host.
 
-![Header](./vinyltocat.png)
