@@ -1,4 +1,4 @@
-<div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/test.png"> </div>
+<div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/github-header-image.png"> </div>
 
 <div align="center"> <img src="https://raw.githubusercontent.com/JeCheeseSmith/Octubre/master/vinyltocat.png"> </div>
 
