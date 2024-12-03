@@ -1,6 +1,3 @@
-![Header](./github-header-image.png)
-
-
 # Octubre
 
 Copyright (C) 2024 JeCheeseSmith, Watson Smith (this is an alias)
