@@ -14,13 +14,20 @@ function App() {
           </p>
 
           <div className="buttonGroup">
-              <ButtonGroup buttons={[ ["Home", "https://home.octubre.be"], ["Cloud", "https://cloud.octubre.be"], ["Me", "https://me.octubre.be"], ["Chat", "https://chat.octubre.be"], ["Archive", "https://archive.octubre.be"], ["Dev", "https://dev.octubre.be"], ["Blog", "https://blog.octubre.be"], ["Status", "https://status.octubre.be"], ["Log", "https://log.octubre.be"]]}/>
+              <ButtonGroup
+                  buttons={[["Home", "https://home.octubre.be"], ["Cloud", "https://cloud.octubre.be"], ["Me", "https://me.octubre.be"], ["Chat", "https://chat.octubre.be"], ["Archive", "https://archive.octubre.be"], ["Dev", "https://dev.octubre.be"], ["Blog", "https://blog.octubre.be"], ["Status", "https://status.octubre.be"], ["Log", "https://log.octubre.be"]]}/>
           </div>
 
           <h3>Contact</h3>
 
           <p>
-              Please register any bugs of this website on <a href={"https://github.com/JeCheeseSmith/Octubre/issues"}> GitHub</a>.
+              Reach out to me using <a
+              href={"https://karsvanvelzen.be"}> this link!</a>
+          </p>
+
+          <p>
+              Please register any bugs of this website on <a
+              href={"https://github.com/JeCheeseSmith/Octubre/issues"}> GitHub</a>.
           </p>
       </>
   )
