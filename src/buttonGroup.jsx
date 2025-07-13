@@ -1,4 +1,4 @@
-import "./button.css";
+import Button from "./button.jsx";
 
 // eslint-disable-next-line react/prop-types
 const ButtonGroup = ({ buttons }) => {
@@ -9,9 +9,7 @@ const ButtonGroup = ({ buttons }) => {
         <>
             {/* eslint-disable-next-line react/prop-types */}
             {buttons.map((buttonLabel, i) => (
-                <button key={i} name={buttonLabel[0]} onClick={() => openInNewTab(buttonLabel[1])}>
-                    {buttonLabel[0]}
-                </button>
+                <Button key={i} text={buttonLabel[0]} onClick={() => openInNewTab(buttonLabel[1])} note={buttonLabel[2]} title={buttonLabel[1]}/>
             ))}
         </>
     );

@@ -1,5 +1,6 @@
 import './app.css'
 import ButtonGroup from "./buttonGroup.jsx";
+import Button from "./button.jsx";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
 
           <div className="buttonGroup">
               <ButtonGroup
-                  buttons={[["Home", "https://home.octubre.be"], ["Cloud", "https://cloud.octubre.be"], ["Me", "https://me.octubre.be"], ["Chat", "https://chat.octubre.be"], ["Archive", "https://archive.octubre.be"], ["Dev", "https://dev.octubre.be"], ["Blog", "https://blog.octubre.be"], ["Status", "https://status.octubre.be"], ["Log", "https://log.octubre.be"], ["Media", "https://media.octubre.be"], ["Pyros", "https://pyros.octubre.be"] ]}/>
+                  buttons={[["Home", "https://home.octubre.be", "Home Automation Platform using HomeAssistant"], ["Cloud", "https://cloud.octubre.be", "Personal Office Infrastructure using Nextcloud"], ["Media", "https://media.octubre.be", "Multimedia management solution using Immich"], ["Blog", "https://blog.octubre.be", "Blog about this hobby project and it's development roadmap - Under construction"], ["Me", "https://me.octubre.be", "My portfolio page"], ["Chat", "https://chat.octubre.be", "Federated chat instance using Matrix - Under construction"], ["Log", "https://log.octubre.be", "Update log linked to the blog - Under construction"], ["Status", "https://status.octubre.be", "External status page of the different Octubre services"], ["Git", "https://git.octubre.be", "Forgejo based gitserver, alternative for my Github account"], ["#Soon", "", "Pyros? - Under construction"], ["Archive", "https://archive.octubre.be", "Separate website to host old, no longer maintained packages & websites - Under construction"], ["Dev", "https://dev.octubre.be", "Development subdomain for alfa & beta releases"]]}/>
           </div>
 
           <h3>Contact</h3>

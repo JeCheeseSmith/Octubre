@@ -1,0 +1,95 @@
+:root {
+    --foreground-color: rgba(255, 255, 255, 0.87);
+    --background-color: #242424;
+    --on-background-color-primary: #1a1a1a;
+    --on-background-color-secondary: rgb(64, 64, 64);
+    --primary-color: rgb(255, 102, 0);
+  /*--secundary-color: #c084fc;*/
+}
+.controlButtonContainer{
+      position: relative; /* Needed for absolute positioning of the tooltip */
+    display: inline-block;
+}
+
+.controlButton {
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    margin: 0.5vw;
+    padding: 10px 10px;
+
+    text-align: center;
+    width: 150px;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+
+    background-color: var(--on-background-color-primary);
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.controlButton:hover {
+  border-color: var(--primary-color);
+}
+.controlButton:focus,
+.controlButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.controlButtonNote {
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    background-color: var(--on-background-color-secondary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.controlButtonNoteRight {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--on-background-color-secondary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Title & Shortcut in One Row */
+.tooltipHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 4px;
+}
+
+/* Title on the Left */
+.tooltipTitle {
+    color: var(--primary-color);
+    font-family: inherit;
+}
+
+/* Shortcut on the Right */
+.tooltipShortcut {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Note Below */
+.tooltipNote {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #ddd;
+    font-family: inherit;
+}
